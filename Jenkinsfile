@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Install Backend') {
             steps {
                 dir('acquisai-backend') {
@@ -23,6 +24,13 @@ pipeline {
                 dir('acquisai-frontend') {
                     sh 'npm run build'
                 }
+            }
+        }
+
+        stage('Deploy with Docker Compose') {
+            steps {
+                sh 'docker compose down'
+                sh 'docker compose up --build -d'
             }
         }
     }
