@@ -37,6 +37,9 @@ Users can ask questions through a React frontend, while the FastAPI backend retr
 * Vite
 * CSS
 
+## CI/CD
+This project uses Jenkins for Continuous Integration and Continuous Deployment (CI/CD).
+
 ---
 
 # RAG Architecture
