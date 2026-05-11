@@ -44,8 +44,8 @@ VITE_API_URL=$VITE_API_URL
 EOF
                     '''
 
-                    sh 'docker compose down'
-                    sh 'docker compose up --build -d'
+                    sh 'docker-compose down'
+                    sh 'docker-compose up --build -d'
                 }
             }
         }
